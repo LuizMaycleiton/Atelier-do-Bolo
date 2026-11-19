@@ -112,6 +112,23 @@ header {
     position: relative;
 }
 
+/* ================= WRAPPERS ================= */
+.texto {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.seguranca .texto {
+    gap: 16px;
+}
+
+.tec-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
 /* ================= SEÇÃO INÍCIO ================= */
 .inicio {
     line-height: 1.3;
@@ -282,6 +299,40 @@ header {
     filter: brightness(1.1);
 }
 
+/* ================= PAINEL ENTREGADORES ================= */
+.painel {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.painel h5 {
+    font-size: 1.05rem;
+    margin: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.linha:last-child {
+    border-bottom: none;
+}
+
+.linha strong {
+    font-size: 1.05rem;
+}
+
+.linha span {
+    font-size: 0.85rem;
+    color: #f5e6dc;
+}
 
 /* ================= SEÇÃO FLUXO SIMPLES ================= */
 .fluxo{
@@ -496,8 +547,313 @@ header {
     margin-top: 0.25rem;
 }
 
-/* Oculto no mobile-first */
 .footer-col,
 .footer-copy {
     display: none;
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1024px) {
+
+    /* ---------- HEADER ---------- */
+    header {
+        padding: 0 8%;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+
+    .menu,
+    .nav.active .menu {
+        position: static;
+        flex-direction: row;
+        width: auto;
+        max-height: none;
+        opacity: 1;
+        visibility: visible;
+        overflow: visible;
+        background-color: transparent;
+        border-bottom: none;
+        gap: 0.5rem;
+    }
+
+    .menu a {
+        padding: 0.5rem 0.9rem;
+        color: white;
+        border-bottom: none;
+        border-radius: 8px;
+    }
+
+    .menu a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* ---------- TÍTULOS ---------- */
+    .titulo {
+        font-size: 2.25rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+    /* ---------- INÍCIO ---------- */
+    .inicio {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+        padding: 4rem 8%;
+        min-height: 480px;
+    }
+
+    .inicio .texto {
+        flex: 1;
+    }
+
+    .inicio .coluna2 {
+        max-width: 280px;
+    }
+
+    .foto-inicio {
+        flex: 1;
+        width: 30%;
+        max-width: 30%;
+        margin: 0;
+        border-radius: 16px;
+    }
+
+    /* ---------- SOLUÇÕES ---------- */
+    .solucoes {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 24px 4rem;
+        padding: 4rem 8%;
+    }
+
+    .solucoes .titulo-section {
+        width: 100%;
+    }
+
+    .solucoes .coluna1 {
+        flex: 1;
+    }
+
+    .cards {
+        flex: 1.5;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card-item {
+        width: calc(50% - 8px);
+    }
+
+    /* ---------- SEGURANÇA ---------- */
+    .seguranca {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+        padding: 4rem 8%;
+    }
+
+    .seguranca .texto {
+        flex: 1;
+    }
+
+    .seguranca .subtitulo {
+        max-width: 440px;
+    }
+
+    .painel {
+        flex: 1;
+    }
+
+    /* ---------- FLUXO ---------- */
+    .fluxo {
+        padding: 3rem 8%;
+    }
+
+    .fluxo-img img {
+        width: 20%;
+    }
+
+    /* ---------- TECNOLOGIAS ---------- */
+    .tecnologias {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 24px 4rem;
+        padding: 4rem 8%;
+    }
+
+    .tecnologias .titulo-section {
+        width: 100%;
+    }
+
+    .tecnologias .coluna1 {
+        flex: 1;
+    }
+
+    .grid-tec {
+        flex: 1.5;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    .tec-item {
+        width: calc(50% - 8px);
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+        gap: 16px;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .tec-item img {
+        margin-bottom: 0;
+    }
+
+    /* ---------- EQUIPE ---------- */
+    .equipe {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        padding: 3rem 8%;
+    }
+
+    .equipe .titulo-section,
+    .equipe .coluna1 {
+        width: 100%;
+    }
+
+    .area-equipe {
+        flex: 1;
+        background-color: var(--fundo);
+        border-radius: 12px;
+        padding: 1rem 1.25rem;
+    }
+
+    .container {
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    .circulo {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+
+    .nomes-equipe h4 {
+        font-size: 0.95rem;
+        margin: 0;
+        color: #4a2c2a;
+    }
+
+    .nomes-equipe p {
+        font-size: 0.8rem;
+        margin: 0;
+        color: #75636A;
+    }
+
+    /* ---------- CONTATO ---------- */
+    .contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 24px 4rem;
+        padding: 4rem 8%;
+    }
+
+    .contato .titulo-section {
+        width: 100%;
+    }
+
+    .contato .coluna1 {
+        flex: 1;
+    }
+
+    .formulario {
+        flex: 1.5;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .title-form {
+        width: calc(50% - 8px);
+    }
+
+    .title-form:nth-child(3),
+    .botao-enviar {
+        width: 100%;
+    }
+
+    .botao-enviar button {
+        width: 190px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+        padding: 3rem 8% 1.5rem;
+    }
+
+    .footer-grid {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .footer-marca {
+        flex: 1.5;
+    }
+
+    .footer-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .footer-col h5 {
+        color: var(--roxo);
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .footer-col a,
+    .footer-col p {
+        color: #4a2c2a;
+        font-size: 0.9rem;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    .footer-col small {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .footer-copy {
+        display: block;
+        margin-top: 2rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid #ead8cd;
+        font-size: 0.8rem;
+    }
+
+    .footer-copy p {
+        margin: 0;
+    }
 }
