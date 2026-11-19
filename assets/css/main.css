@@ -433,6 +433,7 @@ header {
 .formulario textarea {
     min-height: 120px;
     resize: vertical;
+    
 }
 
 .botao-enviar {
@@ -453,6 +454,50 @@ header {
     transition: filter 0.2s ease;
 }
 
-.botao-enviar button:hover {
-    filter: brightness(1.1);
+/* ================= FOOTER ================= */
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8e9ef;
+    padding: 1.75rem 1.25rem;
+    color: #75636A;
+}
+
+.footer-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-marca h4 {
+    color: var(--roxo);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.footer-marca p {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: #75636A;
+    margin: 0;
+}
+
+.footer-marca span {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #75636A;
+    letter-spacing: 0.03em;
+    margin-top: 0.25rem;
+}
+
+/* Oculto no mobile-first */
+.footer-col,
+.footer-copy {
+    display: none;
 }
