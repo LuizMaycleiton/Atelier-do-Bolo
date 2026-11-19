@@ -281,3 +281,20 @@ header {
 .btns:hover {
     filter: brightness(1.1);
 }
+
+
+/* ================= SEÇÃO FLUXO SIMPLES ================= */
+.fluxo{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 24px;
+}
+
+.fluxo-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= SEÇÃO FLUXO SIMPLES ================= */
