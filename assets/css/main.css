@@ -298,3 +298,54 @@ header {
 }
 
 /* ================= SEÇÃO TECNOLOGIAS USADAS ================= */
+.tecnologias {
+    background-color: var(--fundo);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 24px;
+    height: auto;
+}
+
+.grid-tec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 14px;
+}
+
+.tec-item {
+    width: 140px;
+    background-color: white;
+    border: 1px solid #ead8cd;
+    border-radius: 12px;
+    padding: 1.15rem 0.85rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    box-shadow: 0 2px 8px rgba(74, 44, 42, 0.04);
+}
+
+.tec-item img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    margin-bottom: 4px;
+}
+
+.tec-item h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4a2c2a;
+    margin: 0;
+}
+
+.tec-item p {
+    font-size: 0.8rem;
+    color: #75636A;
+    line-height: 1.3;
+    margin: 0;
+}
